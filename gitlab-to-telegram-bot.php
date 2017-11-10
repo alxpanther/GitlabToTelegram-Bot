@@ -22,7 +22,7 @@ if (isset($_SERVER['HTTP_X_GITLAB_TOKEN']) && $_SERVER['HTTP_X_GITLAB_TOKEN'] ==
 			}
 		} else if ($_SERVER['HTTP_X_GITLAB_EVENT'] == "Merge Request Hook") {
 			$merge = $gitlabData["object_attributes"];
-			$message = '<b>'.trim($merge["last_commit"]["author"]["name"]).':</b>\nMerge request !'.$merge["iid"].'\n\n'.trim($merge["title"]).'\n<a href="'.$gitlabData["repository"]["homepage"].'/merge_requests/'.$merge["iid"].'">Details...</a>';
+			$message = '<b>'.trim($merge["last_commit"]["author"]["name"]).':</b>\nMerge request !'.$merge["iid"].'\n<i>'.$gitlabData["object_attributes"]["source_branch"].' ▶︎ '.$gitlabData["object_attributes"]["target_branch"].'</i>\n\n'.trim($merge["title"]).'\n<a href="'.$gitlabData["repository"]["homepage"].'/merge_requests/'.$merge["iid"].'">Details...</a>';
 		}
 		
 		$telegramData = array();
