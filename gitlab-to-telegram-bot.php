@@ -5,7 +5,7 @@ $telegramChatId = TELEGRAM_CHATID;
 if (isset($_SERVER['HTTP_X_GITLAB_TOKEN']) && $_SERVER['HTTP_X_GITLAB_TOKEN'] == $gitlabToken) {
 	$gitlabData = json_decode(file_get_contents('php://input'), true);
 	
-	if (isset($_SERVER['HTTP_X_GITLAB_EVENT']) && (($_SERVER['HTTP_X_GITLAB_EVENT'] == "Push Hook" && $gitlabData["ref"] == "refs/heads/master") && $gitlabData["total_commits_count"] != 0 || ($_SERVER['HTTP_X_GITLAB_EVENT'] == "Merge Request Hook" && $gitlabData["object_attributes"]["state"] != "merged" && $gitlabData["object_attributes"]["action"] == "open"))) {
+	if (isset($_SERVER['HTTP_X_GITLAB_EVENT']) && (($_SERVER['HTTP_X_GITLAB_EVENT'] == "Push Hook" && $gitlabData["ref"] == "refs/heads/master" && $gitlabData["total_commits_count"] != 0) || ($_SERVER['HTTP_X_GITLAB_EVENT'] == "Merge Request Hook" && $gitlabData["object_attributes"]["state"] != "merged" && $gitlabData["object_attributes"]["action"] == "open"))) {
 		$message = "";
 		
 		if ($_SERVER['HTTP_X_GITLAB_EVENT'] == "Push Hook") {
