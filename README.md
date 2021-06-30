@@ -19,3 +19,4 @@ A bot that posts all commits and merge requests for the master branch in a Gitla
 
 ***
 © Yannik Bloscheck - All rights reserved
+edited by Alexander Fedorko
