@@ -3,9 +3,9 @@
 // © Yannik Bloscheck - All rights reserved (https://github.com/yannikbloscheck/GitlabToTelegram-Bot)
 // edited by Alexander Fedorko (alx69@ukr.net)
 //
-$gitlabToken = "16xnX1YC1j2Hj3cCJMr6"; // any set of letters and numbers
-$telegramToken = "1754692947:AAHWIBBcAvhi2kVNgpDK58kSMhGp_cBdDcg";
-$telegramChatId = "-421975807";
+$gitlabToken = "xxxxxxx"; // any set of letters and numbers
+$telegramToken = "xxxxxxxxxx:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+$telegramChatId = "idididididid";
 
 //$scr_name = getcwd()."/".basename(__FILE__, '.php');
 $scr_name = getcwd()."/".str_replace(" ", "_", $_SERVER['HTTP_X_GITLAB_EVENT']);
