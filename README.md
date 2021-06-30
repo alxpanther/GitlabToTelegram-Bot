@@ -18,5 +18,4 @@ A bot that posts all commits and merge requests for the master branch in a Gitla
 - [Gitlab Webhooks](https://docs.gitlab.com/ce/user/project/integrations/webhooks.html)
 
 ***
-© Yannik Bloscheck - All rights reserved
-edited by Alexander Fedorko
+© Yannik Bloscheck - All rights reserved (edited by Alexander Fedorko)
